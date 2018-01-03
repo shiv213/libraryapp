@@ -1,0 +1,8 @@
+{
+  "name": "libraryapp",
+  "app_id": "5d122e6b",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
