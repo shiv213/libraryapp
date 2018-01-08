@@ -1,9 +1,3 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 
 <html lang="en">
@@ -12,6 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Travel Hunt App Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android  Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 <script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <meta charset utf="8">
 <!--font-awsome-css-->
@@ -95,29 +90,47 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								
 							</div>
 							<div class="login-form">
-								<form action="#" method="post">
-									<p>User Name </p>
-									<input type="text" name="Name" required=""/>
-									<p>User Password</p>
-									<input type="password" name="Password" required=""/>	 
-									<div class="wthree-text"> 
-										<ul> 
-											<li>
-												<input type="checkbox" id="brand" value="">
-												<label for="brand"><span></span> Remember me ?</label>  
-											</li>
-											<li> <a href="#">Forgot password?</a> </li>
-										</ul>
-										<div class="clear"> </div>
-									</div> 
-									<input type="submit" value="Sign In">		
-								</form>
-								<p>Don’t have an account ?<a href="#small-dialog1" class="sign-in popup-top-anim"> Sign Up</a></p>
+								<p>Email </p>
+								<input id="txtEmail" type="text" name="Email"  required=""/>
+								<p>Password</p>
+								<input id="txtPassword" type="password" name="Password" required=""/>	 
+								<div class="wthree-text"> 
+									<ul> 
+										<li>
+											<input type="checkbox" id="brand" value="">
+											<label for="brand"><span></span> Remember me ?</label>  
+										</li>
+										<li> <a href="#">Forgot password?</a> </li>
+									</ul>
+									<div class="clear"> </div>
+								</div> 
+								<!-- <input id="login" type="submit" value="Sign In"> //-->
+								<button style="text-transform: capitalize; background:#020202; color: #FFFFFF; padding: .8em 2em; border: none; font-size: 1em;
+								    outline: none;
+								    -webkit-transition: 0.5s all;
+								    -moz-transition: 0.5s all;
+								    -o-transition: 0.5s all;
+								    -ms-transition: 0.5s all;
+									text-transform:uppercase;
+								    width: 100%;
+									font-weight: 600;
+								    -webkit-appearance: none;
+								    " id="btnLogin" type="submit" value="Sign In">
+									Sign In
+								</button>
+								<p>Don’t have an account ?
+									<button style="margin: 0; padding: 0; border: none; color: #2AD2C9; background-color: transparent;" id="btnSignup"> SIGN UP</button>
+									<!-- <a href="#small-dialog1" class="sign-in popup-top-anim"> Sign Up</a> //-->
+								</p>
+								<button id="btnLogout" class="btn btn-action hide">
+									Logout
+								</button>
 							</div> 
 						</div>
 					</div>
 					<!-- //modal --> 
 					<!-- modal-two -->
+					<!-- old signup box
 					<div id="small-dialog1" class="mfp-hide">
 						<div class="login-modal">  
 							<div class="booking-info">
@@ -125,22 +138,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								
 							</div>
 							<div class="login-form signup-form">
-								<form action="#" method="post">
-									<p>User Name </p>
-									<input type="text" name="Name"  required=""/>
-									<p>User Email </p>
-									<input type="text" name="Email"  required=""/>
-									<p>User Password</p>
-									<input type="password" name="Password" placeholder="" required=""/>	
-									<div class="wthree-text"> 
-										<input type="checkbox" id="brand1" value="">
-										<label for="brand1"><span></span>I accept the terms of use</label> 
-									</div>
-									<input type="submit" value="Sign Up">		
-								</form> 
+								<p>Email </p>
+								<input id="email" type="text" name="Email"  required=""/>
+								<p>Password</p>
+								<input id="password" type="password" name="Password" placeholder="" required=""/>	
+								<div class="wthree-text"> 
+									<input type="checkbox" id="brand1" value="">
+									<label for="brand1"><span></span>I accept the <a href="terms-of-use.html" target="_blank">terms of use</a></label> 
+								</div>
+								<input id="signup" type="submit" value="Sign Up">		
 							</div> 
 						</div>
-					</div>
+					</div> 
+					//-->
 					<!-- //modal-two --> 
 					
 				</div>
@@ -302,7 +312,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<div class="w3agile agileinfo_copy_right">
 			<div class="agileinfo_copy_right_left">
-				<p>© 2016 Travel Hunt. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				<p>© 2018 Travel Hunt. All rights reserved</p>
 			</div>
 			<div class="agileinfo_copy_right_right">
 				<ul class="social">
@@ -334,6 +344,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	
 </div>
 </div>
+
+<script src="js/app.js"></script>
 <script src="js/jquery.nicescroll.js"></script>
 <script src="js/scripts.js"></script>
 </body>
