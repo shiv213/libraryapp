@@ -14,6 +14,9 @@
     const btnLogin = document.getElementById('btnLogin')
     const btnSignup = document.getElementById('btnSignup')
     const btnLogout = document.getElementById('btnLogout')
+    const donthaveaccount = document.getElementById('donthaveaccount')
+    const passtext = document.getElementById('passtext')
+    const emailtext = document.getElementById('emailtext')        
 
     btnLogin.addEventListener('click', e=>{
         console.log('login button click detected');
@@ -22,7 +25,7 @@
         const auth = firebase.auth();
 
         const promise = auth.signInWithEmailAndPassword(email, pass);
-        promise.catch(e=>console.log(e.message));
+        promise.catch(e=>alert(e.message));
 
     }
     );
@@ -37,7 +40,7 @@
         if (validateEmail(email)) {
             const promise = auth.createUserWithEmailAndPassword(email, pass);
         } else {
-            promise.catch(e=>console.log(e.message));
+            promise.catch(e=>alert(e.message));
         }
 
     }
@@ -66,12 +69,32 @@
 
     firebase.auth().onAuthStateChanged(firebaseUser=>{
         if (firebaseUser) {
+		    var email = firebaseUser.email;
+		    var emailVerified = firebaseUser.emailVerified;
+		    var uid = firebaseUser.uid;
+		    var providerData = firebaseUser.providerData;
             console.log(firebaseUser);
             btnLogout.classList.remove('hide');
+            btnLogin.classList.add('hide');
+            btnSignup.classList.add('hide');
+            txtEmail.classList.add('hide');
+            txtPassword.classList.add('hide');
+            donthaveaccount.classList.add('hide');
+			emailtext.classList.add('hide');
+			passtext.classList.add('hide');
 
         } else {
             console.log('Not logged in');
+            btnLogin.classList.remove('hide');
             btnLogout.classList.add('hide');
+            btnSignup.classList.remove('hide');
+            txtEmail.classList.remove('hide');
+            txtPassword.classList.remove('hide');
+            donthaveaccount.classList.remove('hide');
+			emailtext.classList.remove('hide');
+			passtext.classList.remove('hide');
+
+
         }
     }
     );

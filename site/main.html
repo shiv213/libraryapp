@@ -9,7 +9,7 @@
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 <script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <meta charset utf="8">
-<!--font-awsome-css-->
+<!--font-awesome-css-->
      <link rel="stylesheet" href="css/font-awesome.min.css"> 
 <!--bootstrap-->
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -86,22 +86,34 @@
 					<div id="small-dialog" class="mfp-hide">
 						<div class="login-modal"> 	
 							<div class="booking-info">
-							   <h3><a href="main.html">T<span>r</span>a<span>v</span>e<span>l</span> <span>H</span>u<span>n</span>t</a></h3>
+							   <h3><a href="main.html">M<span>I</span>S<span>T</span>F<span>O</span>R<span>D</span> M<span>E</span>D<span>I</span>A <span>C</span>E<span>N</span>T<span>E</span>R</a></h3>
 								
 							</div>
 							<div class="login-form">
-								<p>Email </p>
+								<button style="text-transform: capitalize; background:#020202; color: #FFFFFF; padding: .8em 2em; border: none; font-size: 1em;
+								    outline: none;
+								    -webkit-transition: 0.5s all;
+								    -moz-transition: 0.5s all;
+								    -o-transition: 0.5s all;
+								    -ms-transition: 0.5s all;
+									text-transform:uppercase;
+								    width: 100%;
+									font-weight: 600;
+								    -webkit-appearance: none;" id="btnLogout" class="btn btn-action hide">
+									Logout
+								</button>
+								<p id="emailtext">Email </p>
 								<input id="txtEmail" type="text" name="Email"  required=""/>
-								<p>Password</p>
+								<p id="passtext">Password</p>
 								<input id="txtPassword" type="password" name="Password" required=""/>	 
 								<div class="wthree-text"> 
-									<ul> 
+									<!-- <ul> 
 										<li>
 											<input type="checkbox" id="brand" value="">
 											<label for="brand"><span></span> Remember me ?</label>  
 										</li>
 										<li> <a href="#">Forgot password?</a> </li>
-									</ul>
+									</ul> //-->
 									<div class="clear"> </div>
 								</div> 
 								<!-- <input id="login" type="submit" value="Sign In"> //-->
@@ -117,13 +129,10 @@
 								    -webkit-appearance: none;" id="btnLogin" type="submit" value="Sign In">
 									Sign In
 								</button>
-								<p>Don’t have an account ?
+								<p id="donthaveaccount">Don’t have an account ?
 									<button style="margin: 0; padding: 0; border: none; color: #2AD2C9; background-color: transparent;" id="btnSignup"> SIGN UP</button>
 									<!-- <a href="#small-dialog1" class="sign-in popup-top-anim"> Sign Up</a> //-->
 								</p>
-								<button id="btnLogout" class="btn btn-action hide">
-									Logout
-								</button>
 							</div> 
 						</div>
 					</div>
@@ -133,7 +142,7 @@
 					<div id="small-dialog1" class="mfp-hide">
 						<div class="login-modal">  
 							<div class="booking-info">
-							   <h3><a href="main.html">T<span>r</span>a<span>v</span>e<span>l</span> <span>H</span>u<span>n</span>t</a></h3>
+							   <h3><a href="main.html">M<span>I</span>S<span>T</span>F<span>O</span>R<span>D</span> M<span>E</span>D<span>I</span>A <span>C</span>E<span>N</span>T<span>E</span>R</a></h3>
 								
 							</div>
 							<div class="login-form signup-form">
@@ -275,7 +284,7 @@
 				<h3>About Us</h3>
 				<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
 					voluptatibus.</p>
-				<h3 class="logo"><a href="main.html">T<span>r</span>a<span>v</span>e<span>l</span> <span>H</span>u<span>n</span>t</a></h3>
+				<h3 class="logo"><a href="main.html">M<span>I</span>S<span>T</span>F<span>O</span>R<span>D</span> M<span>E</span>D<span>I</span>A <span>C</span>E<span>N</span>T<span>E</span>R</a></h3>
 			</div>
 			<div class="col-md-2 w3agile_footer_grid">	
 				<h3>Links</h3>
