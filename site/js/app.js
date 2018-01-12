@@ -16,7 +16,8 @@
     const btnLogout = document.getElementById('btnLogout')
     const donthaveaccount = document.getElementById('donthaveaccount')
     const passtext = document.getElementById('passtext')
-    const emailtext = document.getElementById('emailtext')        
+    const emailtext = document.getElementById('emailtext')
+    const btnAddBook = document.getElementById('btnAddBook')
 
     btnLogin.addEventListener('click', e=>{
         console.log('login button click detected');
@@ -67,6 +68,8 @@
     }
     );
 
+
+
     firebase.auth().onAuthStateChanged(firebaseUser=>{
         if (firebaseUser) {
 		    var email = firebaseUser.email;
@@ -96,7 +99,20 @@
 
 
         }
+    });
+    var user = firebase.auth().currentUser;
+    var database = firebase.database();
+
+    btnAddBook.addEventListener('click', e=>{
+      addNewBook('test', '12345', 'onHold', user);
     }
-    );
-}
-);
+
+    function addNewBook(bookTitle2, isbn2, status2, whoOwnsIt2) {
+      firebase.database().ref().child(books).push({
+        bookTitle: bookTitle2,
+        isbn: isbn2,
+        status: status2,
+        whoOwnsIt: whoOwnsIt2
+      });
+    }
+});
