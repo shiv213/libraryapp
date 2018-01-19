@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Mistford Media Center" />
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
 <script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <meta charset utf="8">
 <!--font-awesome-css-->
@@ -169,15 +170,27 @@
 				<div class="details-shade">
 						<div class="details-right">
 							<img src="images/logo.png" alt=" ">
-							<h3>Welcome To</h3>
-							<h4>You’re going to like us.</h4>
+							<h3>Catalog Search</h3>
+							<h4>Mistford Media Center</h4>
 
 
 						</div>
 						<div class="banner_search">
-								<form action="#" method="post">
-									<input type="search" name="search" value="Where to go ?" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Where to go ?';}" required="">
-									<input type="submit" value=" ">
+							<!--
+							<script>
+							 $("#search_form").submit(function(){
+							     $(this).attr('action', $(this).attr('action') + '/' + $('#search_item').val());
+							     console.log((this).attr('action', $(this).attr('action') + '/' + $('#search_item').val()));
+							     return true;
+							 });
+							</script>
+							//-->
+								<form action="http://openlibrary.org/search.json" method="get">
+									<input id="q" type="search" name="q" value="Book Title" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Book Title';}" required="">
+									<input type="submit" value=".">
+									<!-- 
+									<input type="search" name="search" value="Book Title" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Book Title';}" required="">
+									//-->
 								</form>
 						</div>
 
@@ -196,7 +209,7 @@
    <!--/welcome-->
 		        <div class="w3agile welcome">
 					<h3 class="w3ls-title">Welcome !</h3>
-          <button style="margin: 0; padding: 0; border: none; color: #2AD2C9;;" id="btnAddBook"> SIGN UP</button>
+          <!-- <button style="margin: 0; padding: 0; border: none; color: #2AD2C9;;" id="btnAddBook"> SIGN UP</button> //-->
 					<div class="b-bottom">
 			<div class="col-md-6 banner_bottom_left">
 				<h3>occaecat cupidatat proident</h3>
