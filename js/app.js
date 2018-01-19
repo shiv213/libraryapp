@@ -85,7 +85,6 @@
             donthaveaccount.classList.add('hide');
 			emailtext.classList.add('hide');
 			passtext.classList.add('hide');
-			document.getElementById("closebutton").click();
 
         } else {
             console.log('Not logged in');
@@ -106,10 +105,11 @@
 
     btnAddBook.addEventListener('click', e=>{
       addNewBook('test', '12345', 'onHold', user);
-    }
+    });
 
     function addNewBook(bookTitle2, isbn2, status2, whoOwnsIt2) {
-      firebase.database().ref().child(books).push({
+      console.log("Adding book!");
+      firebase.database().ref('book/1234').set({
         bookTitle: bookTitle2,
         isbn: isbn2,
         status: status2,
