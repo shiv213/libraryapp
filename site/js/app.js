@@ -85,7 +85,7 @@
             donthaveaccount.classList.add('hide');
 			emailtext.classList.add('hide');
 			passtext.classList.add('hide');
-			document.getElementById("closebutton").click();
+			getElementsByClassName("mfp-close").click();
 
         } else {
             console.log('Not logged in');
