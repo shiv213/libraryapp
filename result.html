@@ -1,38 +1,8 @@
 <!DOCTYPE html>
-<script>
-	// The Google Geocoding API url used to get the JSON data
-	var openlibraryAPI = "http://openlibrary.org/search.json?q=lord+of+the+rings";
-
-	$.getJSON(openlibraryAPI, function (json) {
-
-	    // Set the variables from the results array
-	    var Title = json.docs[0].title_suggest;
-	    console.log('Title : ', Title);
-	    
-	    var latitude = json.results[0].geometry.location.lat;
-	    console.log('Latitude : ', latitude);
-	    
-	    var longitude = json.results[0].geometry.location.lng;
-	    console.log('Longitude : ', longitude);
-
-	    // Set the table td text
-	    $('#Title').text(Title);
-	    $('#latitude').text(latitude);
-	    $('#longitude').text(longitude);
-	});
-
-	// Caching the link jquery object
-	var $myLink = $('a.myLink');
-
-	// Set the links properties
-	$myLink.prop({
-	    href: openlibraryAPI,
-	    title: 'Click on this link to open in a new window.'
-	}).click(function (e) {
-	    e.preventDefault();
-	    window.open(this.href, '_blank');
-	});
-</script>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/result.js"></script>
+</head>
 <body>
 
 	<div id="body">
@@ -51,12 +21,12 @@
 	            <td id="Title"></td>
 	        </tr>
 	        <tr>
-	            <td>Latitude:</td>
-	            <td id="latitude"></td>
+	            <td>Author:</td>
+	            <td id="Author"></td>
 	        </tr>
 	        <tr>
-	            <td>Latitude:</td>
-	            <td id="longitude"></td>
+	            <td>Fulltext?:</td>
+	            <td id="fulltext"></td>
 	        </tr>
 	    </table>
 	</div>

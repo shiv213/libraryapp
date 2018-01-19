@@ -68,14 +68,12 @@
     }
     );
 
-
-
     firebase.auth().onAuthStateChanged(firebaseUser=>{
         if (firebaseUser) {
-		    var email = firebaseUser.email;
-		    var emailVerified = firebaseUser.emailVerified;
-		    var uid = firebaseUser.uid;
-		    var providerData = firebaseUser.providerData;
+            var email = firebaseUser.email;
+            var emailVerified = firebaseUser.emailVerified;
+            var uid = firebaseUser.uid;
+            var providerData = firebaseUser.providerData;
             console.log(firebaseUser);
             btnLogout.classList.remove('hide');
             btnLogin.classList.add('hide');
@@ -83,8 +81,8 @@
             txtEmail.classList.add('hide');
             txtPassword.classList.add('hide');
             donthaveaccount.classList.add('hide');
-			emailtext.classList.add('hide');
-			passtext.classList.add('hide');
+            emailtext.classList.add('hide');
+            passtext.classList.add('hide');
 
         } else {
             console.log('Not logged in');
@@ -94,26 +92,27 @@
             txtEmail.classList.remove('hide');
             txtPassword.classList.remove('hide');
             donthaveaccount.classList.remove('hide');
-			emailtext.classList.remove('hide');
-			passtext.classList.remove('hide');
-
+            emailtext.classList.remove('hide');
+            passtext.classList.remove('hide');
 
         }
-    });
-    var user = firebase.auth().currentUser;
-    var database = firebase.database();
-
-    btnAddBook.addEventListener('click', e=>{
-      addNewBook('test', '12345', 'onHold', user);
-    });
-
-    function addNewBook(bookTitle2, isbn2, status2, whoOwnsIt2) {
-      console.log("Adding book!");
-      firebase.database().ref('book/1234').set({
-        bookTitle: bookTitle2,
-        isbn: isbn2,
-        status: status2,
-        whoOwnsIt: whoOwnsIt2
-      });
     }
-});
+    );
+    //     var user = firebase.auth().currentUser;
+    //     var database = firebase.database();
+
+    //     btnAddBook.addEventListener('click', e=>{
+    //       addNewBook('test', '12345', 'onHold', user);
+    //     });
+
+    //     function addNewBook(bookTitle2, isbn2, status2, whoOwnsIt2) {
+    //       console.log("Adding book!");
+    //       firebase.database().ref('book/1234').set({
+    //         bookTitle: bookTitle2,
+    //         isbn: isbn2,
+    //         status: status2,
+    //         whoOwnsIt: whoOwnsIt2
+    //       });
+    //     }
+}
+);
