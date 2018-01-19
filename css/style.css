@@ -10,7 +10,7 @@ h1, h2, h3 {
 	}
 ul, ol, li{margin: 0; padding: 0;}
 p {margin: 0;padding: 0;}
-body{	
+body{
 background: #043d67;
 	font-family: 'Open Sans', sans-serif;
 	margin:0;
@@ -18,7 +18,7 @@ background: #043d67;
 }
 body p{
   font-family: 'Open Sans', sans-serif;
-  
+
 }
 /*--fonts--*/
 h1,h2,h3,h4,h5,h6{
@@ -66,7 +66,7 @@ h1.fit_tittle a{
 }
 h1.fit_tittle{
 	text-align:center;
-	margin-bottom:40px;	
+	margin-bottom:40px;
 	font-size:50px;
 }
 .fit_main{
@@ -126,11 +126,11 @@ position:relative;
     color: #fff;
     text-decoration: none;
 }
-.clock ul li { 
+.clock ul li {
     display: inline;
     font-size: 15px;
     text-align: center;
-    color: #fff; 
+    color: #fff;
 }
 .Profile-mid {
     float: left;
@@ -365,7 +365,7 @@ h3.w3ls-title2 {
 p {
     line-height: 1.8em;
     color: #555;
-    font-weight: 400;  
+    font-weight: 400;
 	margin-bottom: 1em;
 }
 .w3title-text{
@@ -373,34 +373,34 @@ p {
 }
 .w3ls-text {
     padding: 1em;
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
 	-webkit-transition:.5s all;
-	-moz-transition:.5s all; 
+	-moz-transition:.5s all;
 	transition:.5s all;
 }
 .w3ls-text h5 {
     font-size: 1.4em;
-    color: #000; 
+    color: #000;
 }
 .w3ls-text h5 a {
     color: #000;
     text-decoration: none;
 	-webkit-transition:.5s all;
-	-moz-transition:.5s all; 
+	-moz-transition:.5s all;
 	transition:.5s all;
 }
 .w3ls-text h5 a:hover{
-    color: #8b008b; 
+    color: #8b008b;
 }
 .w3ls-text h6 {
     font-size: 1em;
     color: red;
-    margin-top: 0.8em; 
+    margin-top: 0.8em;
 }
 .w3ls-text p {
     margin-top: .5em;
 }
-/*-- //banner-text--*/ 
+/*-- //banner-text--*/
 .details-right {
     margin: 0 auto;
     text-align: center;
@@ -475,7 +475,7 @@ p {
     background: rgba(22, 21, 23, 0.6);
 }
 .details-shade,.details-grid{
-    min-height:275px; 
+    min-height:275px;
 }
 .details-right h3 {
     color: #fff;
@@ -1001,7 +1001,7 @@ ul.simplefilter {
 .mask a:hover {
     text-decoration: none;
 }
-/*-- //img-hover-effect --*/  
+/*-- //img-hover-effect --*/
 .bus-tp p {
     float: left;
     font-size: 14px;
@@ -1126,7 +1126,7 @@ a.seat-button.two {
 }
 .abt-right h4{
     font-size: 25px;
-    margin-bottom: 25px;	
+    margin-bottom: 25px;
 	font-weight: bold;
     text-transform: uppercase;
 }
@@ -1143,7 +1143,7 @@ a.seat-button.two {
     margin-right: 20px;
 }
 .experts p{
-	margin-bottom: 55px !important;	
+	margin-bottom: 55px !important;
 }
 .choose-grids,.team-inner {
     margin-top: 2em;
@@ -1243,10 +1243,10 @@ h3.hdg {
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
 	border-radius:4px;
-} 
+}
 .input-group {
     margin-bottom: 20px;
-} 
+}
 .grid_5{
 	background:none;
 	padding:2em 0 0 0;
@@ -1508,11 +1508,11 @@ div.seatCharts-cell {
 	color: #182C4E;
     height: 32px;
     width: 32px;
-    line-height: 31px;	
+    line-height: 31px;
 }
 div.seatCharts-seat {
 	color: #FFFFFF;
-	cursor: pointer;	
+	cursor: pointer;
 }
 div.seatCharts-row {
 	height: 35px;
@@ -1898,7 +1898,7 @@ ul.tabs-menu li a:hover{
 	}
 	.bus-midd h4 {
 		font-size: 16px;
-	}	
+	}
 	li.dept {
 		width: 19%;
 	}
@@ -2059,7 +2059,7 @@ ul.tabs-menu li a:hover{
 	select.month, select.year {
 		margin: 9px 0;
 	}
-	select.year,select.month { 
+	select.year,select.month {
     outline: none;
     font-size: 14px;
     padding: 5px 12px 5px 13px;
@@ -2442,7 +2442,7 @@ ul.social li{
 .mfp-preloader,
 .mfp-counter {
   -webkit-user-select: none;
-  -moz-user-select: none; 
+  -moz-user-select: none;
 }
 
 .mfp-loading.mfp-figure {
@@ -2482,7 +2482,7 @@ button.mfp-arrow {
 
 .mfp-close-btn-in .mfp-close {
 	    background: none;
-  } 
+  }
 /**
  * Fade-zoom animation for first dialog
  */
@@ -2500,7 +2500,7 @@ button.mfp-arrow {
 	-ms-transform: translateY(-100px);
 	transform: translateY(-100px);
 	padding: 4em 0;
-} 
+}
 /* animate in */
 .my-mfp-zoom-in.mfp-ready #small-dialog,.my-mfp-zoom-in.mfp-ready #small-dialog1,.my-mfp-zoom-in.mfp-ready #small-dialog2 {
 	opacity: 1;
@@ -2512,7 +2512,7 @@ button.mfp-arrow {
 }
 /*-- //Magnific Popup CSS --*/
 /*-- modal-login-form --*/
- 
+
 .booking-info h3 {
     font-size: 2.1em;
     color: #1e9c95;
@@ -2527,7 +2527,7 @@ button.mfp-arrow {
    color:#020202;
     text-decoration: none;
 }
-.booking-info h3 a:hover{ 
+.booking-info h3 a:hover{
     text-decoration:none;
 }
 .login-form {
@@ -2572,7 +2572,7 @@ button.mfp-arrow {
 	text-decoration:none;
 }
 .login-form p a:hover{
-    color: #555; 
+    color: #555;
 }
 .map iframe {
     width: 100%;
@@ -2617,8 +2617,8 @@ button.mfp-arrow {
     text-align: center;
 }
 .wthree-text ul li {
-    display: inline-block; 
-} 
+    display: inline-block;
+}
 .wthree-text ul li:nth-child(2) {
     margin-top: 1em;
     display: block;
@@ -2730,7 +2730,7 @@ td.price.us {
 /*-- //modal-login-form --*/
 /*-- responsive media queries --*/
 @media (max-width: 1440px){
-	
+
 }
 @media (max-width: 1366px){
 		a.seat-button {
@@ -2741,7 +2741,7 @@ td.price.us {
 @media (max-width: 1280px){
 input[type="file"] {
     left: 46%;
-}	
+}
 	a.seat-button {
     padding: 12px 0px;
     width: 60%;
@@ -2750,7 +2750,7 @@ input[type="file"] {
 @media (max-width: 1080px){
 input[type="file"] {
     left: 45%;
-}	
+}
 
 }
 @media (max-width: 1024px){
@@ -2760,7 +2760,7 @@ input[type="file"] {
 	}
 }
 @media (max-width: 991px){
-	
+
 }
 @media (max-width: 800px){
   .banner_bottom_right_grid {
@@ -2883,7 +2883,7 @@ input[type="file"] {
 	}
 }
 @media (max-width: 736px){
-	
+
 
 }
 @media (max-width: 667px){
@@ -3026,7 +3026,7 @@ input[type="file"] {
 		text-align: center;
 	}
 	.bus-tp-inner {
-		padding: 0.5em 1em; 
+		padding: 0.5em 1em;
 	}
 	li.trav {
 		width: 100%;
@@ -3053,7 +3053,7 @@ input[type="file"] {
 	.choose-grid h4 {
 		font-size: 15px;
 	}
-	
+
 	.grid_4 {
 		background: none;
 		margin-top: 29px;
@@ -3190,11 +3190,11 @@ input[type="file"] {
 		position: absolute;
 		bottom: -54%;
 	}
-	
+
 	.details-right h3 {
        font-size: 20px;
 	}
-	
+
 		div.seatCharts-container {
 		border-right:none;;
 		width: 100%;
@@ -3229,7 +3229,7 @@ input[type="file"] {
     padding: 12px 0px;
     font-size: 13px;
 	}
-	
+
 }
 @media (max-width:414px){
 	.banner_search {
@@ -3383,7 +3383,7 @@ input[type="file"] {
 	.agile_text_box p{
 	  width:95%;
 	}
-	
+
 }
 @media (max-width:375px){
 .banner_bottom_right_grid {
@@ -3498,7 +3498,7 @@ input[type="file"] {
 		text-align: center;
 	}
 	.bus-tp-inner {
-		padding: 0.5em 1em; 
+		padding: 0.5em 1em;
 	}
 	li.trav {
 		width: 100%;
