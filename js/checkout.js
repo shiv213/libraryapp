@@ -1,45 +1,137 @@
-$("#the-file-input").change(function() {
-    console.log(this.files);
-});
+var _scannerIsRunning = false;
 
-// render the image in our view
-function renderImage(file) {
+width2 = screen.width;
+height2 = screen.height;
 
-  // generate a new FileReader object
-  var reader = new FileReader();
+function startScanner() {
+  Quagga.init({
+    inputStream: {
+      name: "Live",
+      type: "LiveStream",
+      target: document.querySelector('#scanner-container'),
+      constraints: {
+        width: width2,
+        height: height2,
+        facingMode: "environment"
+      },
+    },
+    decoder: {
+      readers: [
+        "ean_reader"
+      ],
+      debug: {
+        showCanvas: true,
+        showPatches: true,
+        showFoundPatches: true,
+        showSkeleton: true,
+        showLabels: true,
+        showPatchLabels: true,
+        showRemainingPatchLabels: true,
+        boxFromPatches: {
+          showTransformed: true,
+          showTransformedBox: true,
+          showBB: true
+        }
+      }
+    },
 
-  // inject an image with the src url
-  reader.onload = function(event) {
-    the_url = event.target.result
-    $('#imageContainer').html("<img src='" + the_url + "' style='width:100%; height:100%;' id='barcodeImage'/>")
-  }
+  }, function(err) {
+    if (err) {
+      console.log(err);
+      return
+    }
 
-  // when the file is read it triggers the onload event above.
-  reader.readAsDataURL(file);
+    console.log("Initialization finished. Ready to start");
+    Quagga.start();
+
+    // Set flag to is running
+    _scannerIsRunning = true;
+  });
+
+  Quagga.onProcessed(function(result) {
+    var drawingCtx = Quagga.canvas.ctx.overlay,
+      drawingCanvas = Quagga.canvas.dom.overlay;
+
+    if (result) {
+      if (result.boxes) {
+        drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute("width")), parseInt(drawingCanvas.getAttribute("height")));
+        result.boxes.filter(function(box) {
+          return box !== result.box;
+        }).forEach(function(box) {
+          Quagga.ImageDebug.drawPath(box, {
+            x: 0,
+            y: 1
+          }, drawingCtx, {
+            color: "green",
+            lineWidth: 2
+          });
+        });
+      }
+
+      if (result.box) {
+        Quagga.ImageDebug.drawPath(result.box, {
+          x: 0,
+          y: 1
+        }, drawingCtx, {
+          color: "#00F",
+          lineWidth: 2
+        });
+      }
+
+      if (result.codeResult && result.codeResult.code) {
+        Quagga.ImageDebug.drawPath(result.line, {
+          x: 'x',
+          y: 'y'
+        }, drawingCtx, {
+          color: 'red',
+          lineWidth: 3
+        });
+      }
+    }
+  });
+
+
+  Quagga.onDetected(function(result) {
+    console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
+    // TODO adding name instead of showing isbn
+    document.getElementById("displayBarcode").innerHTML = 'Do you want to check out book ' + result.codeResult.code + '?';
+    Quagga.stop();
+    document.getElementById("scanner-container").innerHTML = '';
+    document.getElementById("scanButton").style.display = 'none';
+    document.getElementById("cancelButton").style.display = 'inline';
+    document.getElementById("checkoutButton").style.display = 'inline';
+  });
 }
 
-// handle input changes
-$("#the-file-input").change(function() {
-    console.log(this.files)
+document.getElementById("cancelButton").addEventListener("click", function() {
+  document.location.href = "checkout.html";
+}, false);
 
-    // grab the first image in the FileList object and pass it to the function
-    renderImage(this.files[0])
-});
+function checkOutBook(){
+  return true;
+}
 
-Quagga.init({
-    inputStream : {
-      name : "Live",
-      type : "LiveStream",
-      target: document.querySelector('#barcodeImage')
-    },
-    decoder : {
-      readers : ["code_128_reader"]
-    }
-  }, function(err) {
-      if (err) {
-          console.log(err);
-          return
-      }
-      console.log("Initialization finished. Ready to start");
-      Quagga.start();
-  });
+document.getElementById("checkoutButton").addEventListener("click", function() {
+  if(checkOutBook()){
+    document.getElementById("displayBarcode").innerHTML = 'You have checked out the book until ';
+    document.getElementById("scanButton").style.display = 'none';
+    document.getElementById("cancelButton").style.display = 'none';
+    document.getElementById("checkoutButton").style.display = 'none';
+    document.getElementById("okButton").style.display = 'inline';
+  }
+}, false);
+
+document.getElementById("okButton").addEventListener("click", function() {
+  document.location.href = "main.html";
+}, false);
+
+// Start/stop scanner
+document.getElementById("scanButton").addEventListener("click", function() {
+  if (_scannerIsRunning) {
+    Quagga.stop();
+    document.getElementById('scanButton').value = "Scan";
+  } else {
+    document.getElementById('scanButton').value = "Stop";
+    startScanner();
+  }
+}, false);
