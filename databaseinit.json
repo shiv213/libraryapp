@@ -1,52 +1,49 @@
 {
-  "catalogue" : {
-    "books" : [{
-      "ISBN" : "1",
-      "title": "Lord of the Rings",
-      "author": "Tolkien",
-      "imageUrl": "https://covers.openlibrary.org/w/id/8069767-M.jpg",
-      "available": 10,
-      "total": 10
-    },{
-      "ISBN" : "2",
-      "title": "Harry Potter",
-      "author": "Rowling",
-      "imageUrl": "https://covers.openlibrary.org/b/olid/OL20928949M-M.jpg",
-      "available": 5,
-      "total": 5
-    },{
-      "ISBN" : "9780076639908",
-      "title": "Algebra 2",
-      "author": "Mc Graw Hill",
-      "imageUrl": "https://covers.openlibrary.org/b/olid/OL7629947M-M.jpg",
-      "available": 100,
-      "total": 100
-    }]
-  },
+  "books": [{
+    "ISBN": "1",
+    "title": "Lord of the Rings",
+    "author": "Tolkien",
+    "imageUrl": "https://covers.openlibrary.org/w/id/8069767-M.jpg",
+    "available": 9,
+    "total": 10
+  }, {
+    "ISBN": "2",
+    "title": "Harry Potter",
+    "author": "Rowling",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL20928949M-M.jpg",
+    "available": 4,
+    "total": 5
+  }, {
+    "ISBN": "9780076639908",
+    "title": "Algebra 2",
+    "author": "Mc Graw Hill",
+    "imageUrl": "https://covers.openlibrary.org/b/olid/OL7629947M-M.jpg",
+    "available": 90,
+    "total": 100
+  }],
   "persons": [{
-      "userid": "XVWNvXqZrETsPNMNq3qOP9KIqTk1",
-      "name": "Berkan",
-      "role": "student",
-      "checkedout": [{
-          "isbn":"1",
-          "quantity": "1",
-          "until": "02/20/2018"
-        },{
-          "isbn":"2",
-          "quantity": "1",
-          "until": "02/21/2018"
-        }],
-      "reserved": []
-    },{
-        "userid": "QfrOewmjiqSvox1eVLDfG13DqEQ2",
-        "name": "Mr. Smith",
-        "role": "teacher",
-        "checkedout": [{
-            "isbn":"9780076639908",
-            "quantity": "10",
-            "until": "02/22/2018"
-          }],
-        "reserved": []
-      }
-  ]
+    "userid": "XVWNvXqZrETsPNMNq3qOP9KIqTk1",
+    "name": "Berkan",
+    "role": "student",
+    "checkedout": [{
+      "isbn": "1",
+      "quantity": "1",
+      "until": "02/20/2018"
+    }, {
+      "isbn": "2",
+      "quantity": "1",
+      "until": "02/21/2018"
+    }],
+    "reserved": []
+  }, {
+    "userid": "QfrOewmjiqSvox1eVLDfG13DqEQ2",
+    "name": "Mr. Smith",
+    "role": "teacher",
+    "checkedout": [{
+      "isbn": "9780076639908",
+      "quantity": "10",
+      "until": "02/22/2018"
+    }],
+    "reserved": []
+  }]
 }

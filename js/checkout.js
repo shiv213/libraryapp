@@ -113,7 +113,7 @@ function checkOutBook(){
 
 document.getElementById("checkoutButton").addEventListener("click", function() {
   if(checkOutBook()){
-    document.getElementById("displayBarcode").innerHTML = 'You have checked out the book until ';
+    document.getElementById("displayBarcode").innerHTML = 'You have checked out the book until a month from today.';
     document.getElementById("scanButton").style.display = 'none';
     document.getElementById("cancelButton").style.display = 'none';
     document.getElementById("checkoutButton").style.display = 'none';

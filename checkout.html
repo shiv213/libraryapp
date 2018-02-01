@@ -101,12 +101,11 @@
             <div class="pro-menu">
               <div class="logo">
                 <li><a class=" link link--yaku" href="main.html"><span>H</span><span>o</span><span>m</span><span>e</span></a></li>
-                <li><a class=" link link--yaku" href="about.html"><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span></a></li>
                 <li><a class=" link link--yaku" href="map.html"><span>M</span><span>a</span><span>p</span></a></li>
                 <li><a class=" link link--yaku active" href="checkout.html"><span>C</span><span>h</span><span>e</span><span>c</span><span>k</span><span>o</span><span>u</span><span>t</span></a></li>
+                <li><a class=" link link--yaku" href="about.html"><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span></a></li>
+                <li><a class=" link link--yaku" href="help.html"><span>H</span><span>e</span><span>l</span><span>p</span></a></li>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -185,13 +184,13 @@
     <h3 id="displayBarcode" style="text-align: center; padding-bottom:40%;">
       To checkout your book simply scan the barcode.
     </h3>
-    <div id="buttonBar">
+    <div id="buttonBar" style="text-align: center;">
       <input type="button" class="allButtons" id="scanButton" value="Scan"/>
       <input type="button" class="allButtons" id="cancelButton" value="Cancel" hidden/>
       <input type="button" class="allButtons" id="checkoutButton" value="Checkout" hidden/>
       <input type="button" class="allButtons" id="okButton" value="Ok" hidden/>
     </div>
-    <div id="scanner-container" style="height"></div>
+    <div id="scanner-container" style="height: 100%; display: inline-block;"></div>
   </div>
   <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
   <script src="js/checkout.js"></script>

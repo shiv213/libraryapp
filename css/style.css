@@ -4,10 +4,35 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
+video {
+	top:0%;
+	left:0%;
+	height:50%;
+	width:100%;
+	overflow: hidden;
+}
+
+.centerer {
+	padding-top: 50px,
+	padding-bottom: 50px,
+}
+
+.container {
+	padding: 2px 16px;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	background-color: #f7f7f7;
+}
 
 .checkoutPage {
 	padding: 3.5em 2em;
 	height: 100%;
+}
+
+.frontPage {
+	background:#f7f7f7;
 }
 
 .allButtons {
@@ -3560,7 +3585,7 @@ input[type="file"] {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		bottom: -68%;
+		bottom: -86%;
 	}
 	.choose-grid h4 {
 		font-size: 15px;
