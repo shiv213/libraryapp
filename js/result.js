@@ -56,20 +56,20 @@ function getBook() {
 
    	var openlibraryAPI = $("#q").val();
    	console.log(openlibraryAPI)
-   	openlibraryAPI = "http://openlibrary.org/search.json?q=" + openlibraryAPI;
+   	openlibraryAPI = "https://openlibrary.org/search.json?q=" + openlibraryAPI;
    	console.log(openlibraryAPI)
 	$.getJSON(openlibraryAPI, function (json) {
 
 	    // Set the variables from the results array
 	    var cover = json.docs[0].isbn[0];
-	    cover = "http://covers.openlibrary.org/b/isbn/"+cover+"-M.jpg";
+	    cover = "https://covers.openlibrary.org/b/isbn/"+cover+"-M.jpg";
 	    coverimg = document.getElementById('cover0');
 		coverimg.src = cover;
 		var Title = json.docs[0].title_suggest;
 	    var Author = json.docs[0].author_name;
 	    
 	    var coverhere1 = json.docs[1].isbn[0];
-	    coverhere1 = "http://covers.openlibrary.org/b/isbn/"+coverhere1+"-M.jpg";
+	    coverhere1 = "https://covers.openlibrary.org/b/isbn/"+coverhere1+"-M.jpg";
 		coverimg1 = document.getElementById('cover1');
 		coverimg1.src = coverhere1;
 		var Title1 = json.docs[1].title_suggest;
@@ -77,7 +77,7 @@ function getBook() {
 		var cover1 = json.docs[1].isbn[0];
 
 	    var coverhere2 = json.docs[2].isbn[0];
-	    coverhere2 = "http://covers.openlibrary.org/b/isbn/"+coverhere2+"-M.jpg";
+	    coverhere2 = "https://covers.openlibrary.org/b/isbn/"+coverhere2+"-M.jpg";
 		coverimg2 = document.getElementById('cover2');
 		coverimg2.src = coverhere2;
 		var Title2 = json.docs[2].title_suggest;
@@ -85,7 +85,7 @@ function getBook() {
 		var cover2 = json.docs[2].isbn[0];
 
 	    var coverhere3 = json.docs[3].isbn[0];
-	    coverhere3 = "http://covers.openlibrary.org/b/isbn/"+coverhere3+"-M.jpg";
+	    coverhere3 = "https://covers.openlibrary.org/b/isbn/"+coverhere3+"-M.jpg";
 		coverimg3 = document.getElementById('cover3');
 		coverimg3.src = coverhere3;
 		var Title3 = json.docs[3].title_suggest;
@@ -93,7 +93,7 @@ function getBook() {
 		var cover3 = json.docs[3].isbn[0];		
 
 	    var coverhere4 = json.docs[4].isbn[0];
-	    coverhere4 = "http://covers.openlibrary.org/b/isbn/"+coverhere4+"-M.jpg";
+	    coverhere4 = "https://covers.openlibrary.org/b/isbn/"+coverhere4+"-M.jpg";
 		coverimg4 = document.getElementById('cover4');
 		coverimg4.src = coverhere4;
 		var Title4 = json.docs[4].title_suggest;
@@ -101,7 +101,7 @@ function getBook() {
 		var cover4 = json.docs[4].isbn[0];
 
 	    var coverhere5 = json.docs[5].isbn[0];
-	    coverhere5 = "http://covers.openlibrary.org/b/isbn/"+coverhere5+"-M.jpg";
+	    coverhere5 = "https://covers.openlibrary.org/b/isbn/"+coverhere5+"-M.jpg";
 		coverimg5 = document.getElementById('cover5');
 		coverimg5.src = coverhere5;
 		var Title5 = json.docs[5].title_suggest;
@@ -109,7 +109,7 @@ function getBook() {
 		var cover5 = json.docs[5].isbn[0];
 
 	    var coverhere6 = json.docs[6].isbn[0];
-	    coverhere6 = "http://covers.openlibrary.org/b/isbn/"+coverhere6+"-M.jpg";
+	    coverhere6 = "https://covers.openlibrary.org/b/isbn/"+coverhere6+"-M.jpg";
 		coverimg6 = document.getElementById('cover6');
 		coverimg6.src = coverhere6;
 		var Title6 = json.docs[6].title_suggest;
@@ -117,7 +117,7 @@ function getBook() {
 		var cover6 = json.docs[6].isbn[0];
 
 	    var coverhere7 = json.docs[7].isbn[0];
-	    coverhere7 = "http://covers.openlibrary.org/b/isbn/"+coverhere7+"-M.jpg";
+	    coverhere7 = "https://covers.openlibrary.org/b/isbn/"+coverhere7+"-M.jpg";
 		coverimg7 = document.getElementById('cover7');
 		coverimg7.src = coverhere7;
 		var Title7 = json.docs[7].title_suggest;
@@ -125,7 +125,7 @@ function getBook() {
 		var cover7 = json.docs[7].isbn[0];
 
 	    var coverhere8 = json.docs[8].isbn[0];
-	    coverhere8 = "http://covers.openlibrary.org/b/isbn/"+coverhere8+"-M.jpg";
+	    coverhere8 = "https://covers.openlibrary.org/b/isbn/"+coverhere8+"-M.jpg";
 		coverimg8 = document.getElementById('cover8');
 		coverimg8.src = coverhere8;
 		var Title8 = json.docs[8].title_suggest;
@@ -133,7 +133,7 @@ function getBook() {
 		var cover8 = json.docs[8].isbn[0];
 
 	    var coverhere9 = json.docs[9].isbn[0];
-	    coverhere9 = "http://covers.openlibrary.org/b/isbn/"+coverhere9+"-M.jpg";
+	    coverhere9 = "https://covers.openlibrary.org/b/isbn/"+coverhere9+"-M.jpg";
 		coverimg9 = document.getElementById('cover9');
 		coverimg9.src = coverhere9;
 		var Title9 = json.docs[9].title_suggest;
