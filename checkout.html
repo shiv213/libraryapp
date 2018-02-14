@@ -193,7 +193,40 @@
     <div id="scanner-container" style="height: 100%; display: inline-block;"></div>
   </div>
   <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
-  <script src="js/checkout.js"></script>
+  <!-- <script src="js/checkout.js"></script>
+  <!-- CAMTEST -->
+  <video autoplay id="mycamtestvideo"></video>
+<img src="" id="mycamtestimgid">
+<canvas style="display:none;" id="mycamtestcanvas"></canvas>
+
+<script>
+  var video = document.getElementById('mycamtestvideo');
+  var canvas = document.getElementById('mycamtestcanvas');
+  var ctx = canvas.getContext('2d');
+  var localMediaStream = null;
+
+  function errorCallback(err){
+	console.log("error: "+err);
+  }
+
+  function snapshot() {
+    if (localMediaStream) {
+      ctx.drawImage(video, 0, 0);
+      // "image/webp" works in Chrome.
+      // Other browsers will fall back to image/png.
+      document.getElementById('mycamtestimgid').src = canvas.toDataURL('image/png');
+    }
+  }
+
+  video.addEventListener('click', snapshot, false);
+
+  // Not showing vendor prefixes or code that works cross-browser.
+  navigator.mediaDevices.getUserMedia({video: true}, function(stream) {
+    video.src = window.URL.createObjectURL(stream);
+    localMediaStream = stream;
+  }, errorCallback);
+</script>
+  <!-- CAMTEST -->
   <script src="js/jquery.nicescroll.js"></script>
   <script src="js/scripts.js"></script>
 </body>
