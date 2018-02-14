@@ -221,10 +221,14 @@
   video.addEventListener('click', snapshot, false);
 
   // Not showing vendor prefixes or code that works cross-browser.
-  navigator.mediaDevices.getUserMedia({video: true}, function(stream) {
+  navigator.mediaDevices.getUserMedia({video: true})
+  .then(function(stream){
     video.src = window.URL.createObjectURL(stream);
     localMediaStream = stream;
-  }, errorCallback);
+  })
+  .catch(function(err){
+	console.log("error: "+err);
+   });
 </script>
   <!-- CAMTEST -->
   <script src="js/jquery.nicescroll.js"></script>
